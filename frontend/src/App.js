@@ -11,7 +11,7 @@ function App() {
         <Switch>
           <Route path="/login">
            
-            <div className="d-flex flex-column justify-content-center align-items-center shadow vh-100 contenedorLogin"  >
+            <div className="d-flex flex-column justify-content-center align-items-center  vh-100 contenedorLogin"  >
             <Login /> 
             <Link to="/" className="d-none" >
               pagina princpial
@@ -23,7 +23,7 @@ function App() {
 
           <Route path="/register">
            
-           <div className="d-flex flex-column justify-content-center align-items-center shadow vh-100 contenedorLogin"  >
+           <div className="d-flex  justify-content-center align-items-center   contenedorLogin"  >
            <Register /> 
            <Link to="/" className="d-none" >
              pagina princpial
