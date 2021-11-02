@@ -6,7 +6,7 @@ export default function Register(){
     return(
         <>
         <div className="container mx-auto  col-10 col-md-6 shadow my-2 p-3 formulario-login rounded">
-            <h1 className="text-center text-uppercase text-success">Register</h1>
+            <h1 className="text-center text-uppercase">Register</h1>
             <form autoComplete="off" className="mx-10">
             <input type="text" placeholder="nombres" autoComplete="off" className="col-6  form-control text-white py-3 my-3 " />
             <input type="text" placeholder="apellidos" autoComplete="off" className="col-6  form-control text-white py-3 my-3 " />
