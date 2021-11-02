@@ -16,7 +16,7 @@ export default function Register(){
                 <input type="password" placeholder="Escriba la contraseña nuevamente" className="col-12 shadow form-control text-white py-3 my-3"  />
                <label htmlFor="fecha" className="text-success text-uppercase">fecha de nacimiento</label>
                 <input type="date"  name="fecha" className="col-12 shadow form-control text-white py-3 my-3"  />
-                <input type="submit" value="iniciar session" className="btn btn-success form-control col-12 text-white py-2" />
+                <input type="submit" value="iniciar session" className="btn btn-primary form-control col-12 text-white py-2" />
             </form>
             <h6 className="text-center col-12 ">
             <Link to="/login" >iniciar sessión</Link>

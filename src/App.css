@@ -4,8 +4,11 @@
 }
 
 body{
-  background-color: #4bff00;
+  background: linear-gradient(to right, #2948ff, #396afc);
+}
 
+h1{
+  color:#0d6efd;
 }
 
 .App-logo {
@@ -14,7 +17,7 @@ body{
 }
 
 .contenedorLogin{
-  background-color: #4bff00;
+  background: linear-gradient(to right, #2948ff, #396afc);
 }
 
 .formulario-login{
