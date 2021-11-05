@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { PostUsuariosGoogle } from 'src/servivios';
 const googleClientId =  "598181744774-4cnk833rv82mtpe4bj12q3nkbgr8uoj1.apps.googleusercontent.com"// process.env.REACT_APP_GOOGLE_CLIENT_ID;
  
 const loadGoogleScript = () => {
@@ -40,22 +39,22 @@ function GoogleButton() {
     setEmail(profile.getEmail());
     setImageUrl(profile.getImageUrl());
   
-    (async () => {
+    // (async () => {
       
-      const res = await PostUsuariosGoogle({nombre:  profile.getName(), email : profile.getEmail(), fotoUrl :profile.getImageUrl() , documento :  profile.getId(), role:"vendedor"})
-     console.log(res)
-     if(res.data.estado==0 ){
-          if( !res.data.respuesta=="Los datos no fueron enviados correctamente!"){
-            alert(res.data.respuesta)
-            }
-        }else{
-      localStorage.setItem("session", res.data.respuesta);
-      window.location.reload();
-     }
+    //   const res = await PostUsuariosGoogle({nombre:  profile.getName(), email : profile.getEmail(), fotoUrl :profile.getImageUrl() , documento :  profile.getId(), role:"vendedor"})
+    //  console.log(res)
+    //  if(res.data.estado==0 ){
+    //       if( !res.data.respuesta=="Los datos no fueron enviados correctamente!"){
+    //         alert(res.data.respuesta)
+    //         }
+    //     }else{
+    //   localStorage.setItem("session", res.data.respuesta);
+    //   window.location.reload();
+    //  }
 
 
     
-    })()
+    // })()
 
 
 
