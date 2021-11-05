@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
+import GoogleButton from "../componentes/GoogleButton";
 import "./../../App.css";
 
 export default function Register(){
 
     return(
         <>
-        <div className="container mx-auto  col-10 col-md-6 shadow my-2 p-3 formulario-login rounded">
+        <div className="container mx-auto  col-10 col-md-6 col-lg-4 shadow my-2 p-3 formulario-login rounded">
             <h1 className="text-center text-uppercase">Register</h1>
             <form autoComplete="off" className="mx-10">
             <input type="text" placeholder="nombres" autoComplete="off" className="col-6  form-control text-white py-3 my-3 " />
@@ -21,7 +22,7 @@ export default function Register(){
             <h6 className="text-center col-12 ">
             <Link to="/login" >iniciar sessión</Link>
             </h6>
-
+            <GoogleButton/>
         </div>
         </>
     )

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
+import GoogleButton from "../componentes/GoogleButton";
 import "./../../App.css";
 
 export default function Login(){
-
     return(
         <>
         <div className="container mx-auto  col-10 col-md-6 shadow my-2 p-3 formulario-login rounded">
@@ -16,7 +16,7 @@ export default function Login(){
             <h6 className="text-center col-12 ">
             <Link to="/register" >registrarme.</Link>
             </h6>
-
+<GoogleButton/>
         </div>
         </>
     )
