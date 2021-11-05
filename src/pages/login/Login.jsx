@@ -13,8 +13,8 @@ export default function Login(){
                 
                 <input type="submit" value="iniciar session" className="btn btn-primary form-control col-12 text-white py-2" />
             </form>
-            <h6 className="my-3">
-            <GoogleButton/>
+            <h6 className="my-3 ">
+            <GoogleButton className="w-100 col-12"/>
             </h6>
             
             <h6 className="text-center col-12 ">
