@@ -5,11 +5,7 @@ import "./../../App.css";
 
 export default function Register(){
 
-    useEffect(() => {
-
-    window.location.reload()
-        
-    }, []);
+  
     return(
         <>
         <div className="container mx-auto  col-10 col-md-6 col-lg-4 shadow my-2 p-3 formulario-login rounded">
