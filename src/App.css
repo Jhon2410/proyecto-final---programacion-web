@@ -17,7 +17,9 @@ background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, F
 h1{
   color:#0d6efd;
 }
-
+.btn-google{
+  width: 100%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -57,6 +59,11 @@ background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, F
 
 .App-link {
   color: #61dafb;
+}
+
+.btn{
+  height: 50px ;
+
 }
 
 @keyframes App-logo-spin {
