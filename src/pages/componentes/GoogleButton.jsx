@@ -84,7 +84,7 @@ function GoogleButton() {
   const renderSigninButton = (_gapi) => {
     _gapi.signin2.render('google-signin', {
       'scope': 'profile email',
- 
+  
       'height': 50,
       'longtitle': true,
       'theme': 'dark',
@@ -117,7 +117,7 @@ function GoogleButton() {
     //ensure everything is set before loading the script
     loadGoogleScript();
     
-  });
+  },[]);
 
   
   
