@@ -84,7 +84,6 @@ function GoogleButton() {
   const renderSigninButton = (_gapi) => {
     _gapi.signin2.render('google-signin', {
       'scope': 'profile email',
-  
       'height': 50,
       'longtitle': true,
       'theme': 'dark',
@@ -125,7 +124,7 @@ function GoogleButton() {
   return (
     <div className="">
         {!isLoggedIn &&
-          <div id="google-signin"></div>
+          <div id="google-signin" className="col-12 w-100"></div>
         }
         
         {isLoggedIn &&
