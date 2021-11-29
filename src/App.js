@@ -29,13 +29,23 @@ function App() {
             <h2 className="bg-dark text-center text-white fs-3 p-3">Menu</h2>
           </Route>
 
-          <Route path="/">
-            <Main />
-            <Header pg="perfil" />
+          <Route path="/home">
+            <Main pg="home" />
+            <Header />
             <Profile />
 
             <Link to="/login">ir a el login</Link>
           </Route>
+
+          <Route path="/">
+            <Main pg="user" />
+            <Header />
+            <Profile />
+
+            <Link to="/login">ir a el login</Link>
+          </Route>
+
+          
         </Switch>
       </Router>
     </>
