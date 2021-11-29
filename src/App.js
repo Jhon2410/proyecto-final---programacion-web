@@ -8,6 +8,8 @@ import Main from "./pages/main";
 function App() {
   return (
     <>
+            <Header />
+
       <Router>
         <Switch>
           <Route path="/login">
@@ -39,7 +41,6 @@ function App() {
 
           <Route path="/">
             <Main pg="user" />
-            <Header />
             <Profile />
 
             <Link to="/login">ir a el login</Link>

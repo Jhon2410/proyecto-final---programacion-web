@@ -13,7 +13,7 @@ const paginas = [
   {
     icono: "file-blank",
     nombre: " ",
-    url: "/file-blank",
+    url: "/menu",
   },
   {
     icono: "book-content",

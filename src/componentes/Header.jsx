@@ -1,9 +1,9 @@
 export default function Header() {
   return (
-    <div className="  mb-3 py-3 bg-white">
+    <div className="  mb-3 py-3 bg-white ">
       <div className="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <div
-          class="mx-3"
+          className="mx-3"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#menu-opciones"
@@ -14,7 +14,7 @@ export default function Header() {
             width="36"
             height="36"
             fill="currentColor"
-            class="bi bi-list"
+            className="bi bi-list"
             viewBox="0 0 16 16"
           >
             <path
@@ -24,9 +24,10 @@ export default function Header() {
           </svg>
         </div>
 
+        <div className="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
         <a
           href="/"
-          className="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none"
+          
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -40,6 +41,29 @@ export default function Header() {
             <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z" />
           </svg>
         </a>
+        <div className="input-group mx-3 rounded border">
+            <input
+              type="search"
+              className="se rounded p-2 form-control"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="search-addon"
+            />
+            <span className="input-group-text border-0 bg-white" id="search-addon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="black"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg>
+            </span>
+            
+          </div>
+        </div>
 
         <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li>
@@ -50,12 +74,7 @@ export default function Header() {
         </ul>
 
         <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input
-            type="search"
-            className="form-control col-12 search"
-            placeholder="buscar "
-            aria-label="Search"
-          />
+        
         </form>
 
         <div className="dropdown text-end">
@@ -65,6 +84,9 @@ export default function Header() {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
+      <span className="mx-2">Jhon anderson</span>
+
+          
             <img
               src="https://github.com/mdo.png"
               alt="mdo"
@@ -79,7 +101,7 @@ export default function Header() {
           >
             <li>
               <button
-                class=" dropdown-item"
+                className=" dropdown-item"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasRight"
@@ -109,41 +131,42 @@ export default function Header() {
           </ul>
         </div>
         <div
-          class="offcanvas offcanvas-end"
+          className="offcanvas offcanvas-end"
           tabindex="-1"
           id="offcanvasRight"
           aria-labelledby="offcanvasRightLabel"
         >
-          <div class="offcanvas-header">
+          <div className="offcanvas-header">
             <h5 id="offcanvasRightLabel">configuracion</h5>
             <button
               type="button"
-              class="btn-close text-reset"
+              className="btn-close text-reset"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
           </div>
-          <div class="offcanvas-body">...</div>
+          <div className="offcanvas-body">...</div>
         </div>
         <div
-          class="offcanvas offcanvas-start w-25"
+          className="offcanvas offcanvas-start w-25"
           tabindex="-1"
           id="menu-opciones"
           aria-labelledby="offcanvasRightLabel"
-          data-bs-scroll="true" data-bs-backdrop="false"
+          data-bs-scroll="true"
+          data-bs-backdrop="false"
         >
-          <div class="offcanvas-header">
-          {/*}
+          <div className="offcanvas-header">
+            {/*}
             <h5 id="offcanvasRightLabel">opciones</h5>
          {*/}
             <button
               type="button"
-              class="btn-close text-reset"
+              className="btn-close text-reset"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
           </div>
-          <div class="offcanvas-body">...</div>
+          <div className="offcanvas-body">...</div>
         </div>
       </div>
     </div>
