@@ -33,11 +33,11 @@ const paginas = [
 ];
 
 export default function Main(props) {
-  const generarMenu = paginas.map((link) => {
+  const generarMenu = paginas.map((link,index) => {
     let n = link.icono 
     if (n === props.pg) {
       return (
-        <li>
+        <li key={index}>
           <Link to={ link.url} className={"nav-link scrollto  active"}>
             <i className={"bx bx-" + n}></i> <span>{n}</span>
           </Link>
@@ -45,7 +45,7 @@ export default function Main(props) {
       );
     } else {
       return (
-        <li>
+        <li key={index}>
           <Link to={ link.url} pg={n} className={"nav-link scrollto  "}>
             <i className={"bx bx-" + n}></i> <span>{n}</span>
           </Link>

@@ -1,10 +1,9 @@
 export default function Header() {
   return (
     <div className="  mb-3 py-3 bg-white ">
-      <div className="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <div className=" d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <div
           className="mx-3"
-          type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#menu-opciones"
           aria-controls="menu-opciones"
@@ -18,30 +17,27 @@ export default function Header() {
             viewBox="0 0 16 16"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
             />
           </svg>
         </div>
 
         <div className="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-        <a
-          href="/"
-          
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="50"
-            height="50"
-            fill="blue"
-            className="bi bi-bootstrap-fill"
-            viewBox="0 0 16 16"
-          >
-            <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z" />
-            <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z" />
-          </svg>
-        </a>
-        <div className="input-group mx-3 rounded border">
+          <a href="./">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="blue"
+              className="bi bi-bootstrap-fill"
+              viewBox="0 0 16 16"
+            >
+              <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z" />
+              <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z" />
+            </svg>
+          </a>
+          <div className="input-group mx-3 rounded border">
             <input
               type="search"
               className="se rounded p-2 form-control"
@@ -49,19 +45,21 @@ export default function Header() {
               aria-label="Search"
               aria-describedby="search-addon"
             />
-            <span className="input-group-text border-0 bg-white" id="search-addon">
+            <span
+              className="input-group-text border-0 bg-white"
+              id="search-addon"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
                 fill="black"
-                class="bi bi-search"
+                className="bi bi-search"
                 viewBox="0 0 16 16"
               >
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
               </svg>
             </span>
-            
           </div>
         </div>
 
@@ -73,20 +71,17 @@ export default function Header() {
           </li>
         </ul>
 
-        <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-        
-        </form>
+        <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"></form>
 
-        <div className="dropdown text-end">
+        <div className="dropdown text-end mx-3">
           <i
             className="d-block link-dark text-decoration-none dropdown-toggle"
             id="dropdownUser1"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-      <span className="mx-2">Jhon anderson</span>
+            <span className="mx-2">Jhon anderson</span>
 
-          
             <img
               src="https://github.com/mdo.png"
               alt="mdo"
@@ -132,7 +127,7 @@ export default function Header() {
         </div>
         <div
           className="offcanvas offcanvas-end"
-          tabindex="-1"
+          tabIndex="-1"
           id="offcanvasRight"
           aria-labelledby="offcanvasRightLabel"
         >
@@ -149,7 +144,7 @@ export default function Header() {
         </div>
         <div
           className="offcanvas offcanvas-start w-25"
-          tabindex="-1"
+          tabIndex="-1"
           id="menu-opciones"
           aria-labelledby="offcanvasRightLabel"
           data-bs-scroll="true"

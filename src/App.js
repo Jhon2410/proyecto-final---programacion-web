@@ -8,7 +8,6 @@ import Main from "./pages/main";
 function App() {
   return (
     <>
-            <Header />
 
       <Router>
         <Switch>
@@ -27,26 +26,27 @@ function App() {
             </div>
           </Route>
 
-          <Route path="/menu">
-            <h2 className="bg-dark text-center text-white fs-3 p-3">Menu</h2>
-          </Route>
-
-          <Route path="/home">
-            <Main pg="home" />
-            <Header />
-            <Profile />
-
-            <Link to="/login">ir a el login</Link>
-          </Route>
-
           <Route path="/">
-            <Main pg="user" />
-            <Profile />
+             <Route path="/">
+             <Header />
+             <Main pg="" />
+            
+             </Route>
 
-            <Link to="/login">ir a el login</Link>
+            <Route path="/home">
+              <Main pg="home" />
+              <h2 className="container bg-dark text-center text-white fs-3 p-3">pagina principal</h2>
+            </Route>
+            <Route path="/user">
+              <Main pg="user" />
+              <Profile />
+            </Route>
+            <Route path="/f">FFFF</Route>
+            <Route path="/menu">
+              <Main pg="menu" />
+              <h2 className= "container bg-dark text-center text-white fs-3 p-3">Menu</h2>
+            </Route>
           </Route>
-
-          
         </Switch>
       </Router>
     </>
