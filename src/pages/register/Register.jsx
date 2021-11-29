@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom"
 import GoogleButton from "../componentes/GoogleButton";
 import "./../../App.css";

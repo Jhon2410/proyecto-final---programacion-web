@@ -20,9 +20,6 @@ export default function Login(){
             <h6 className="text-center col-12 ">
             <Link to="/register" >registrarme.</Link>
             </h6>
-
-
-
         </div>
         </>
     )

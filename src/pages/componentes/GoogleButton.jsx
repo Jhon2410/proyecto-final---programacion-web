@@ -131,7 +131,6 @@ function GoogleButton() {
         {isLoggedIn &&
           <div>
             <div>
-            <img src={imageUrl} onError={(e)=>{e.target.onerror = null; e.target.src="https://cdn-0.emojis.wiki/emoji-pics/apple/pensive-face-apple.png"}} />
             <p> Hola <strong>{name}</strong> su ESTADO esta en <hr/> <span className="text-danger h3"> verificación</span></p>
             </div>
             <div>{name}</div>
