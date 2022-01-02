@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/login">
-            <div className="d-flex flex-column justify-content-center align-items-center bg-primary vh-100 contenedorLogin">
+            <div className="">
               <Login />
             </div>
           </Route>
@@ -32,7 +32,6 @@ function App() {
              <Main pg="" />
             
              </Route>
-
             <Route path="/home">
               <Main pg="home" />
               <h2 className="container bg-dark text-center text-white fs-3 p-3">pagina principal</h2>

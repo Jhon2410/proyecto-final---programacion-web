@@ -1,6 +1,21 @@
-export default function Header() {
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+export default function Header({estado}) {
+  const [redirect, setredirect] = useState(estado?estado:false);
+  const salir=()=>{
+    localStorage.removeItem("session");
+  }
+  useEffect(() => {
+    if (window.location.pathname !== "/login") {
+      if (localStorage.getItem("session") === null) {
+        setredirect(true);
+      }
+    }
+  }, []);
   return (
     <div className="  mb-3 py-2 bg-white ">
+      {redirect ? <Redirect push to="/login" /> : null}
       <div className=" d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <div
           className="px-3 col-1 text-end"
@@ -54,22 +69,22 @@ export default function Header() {
         </div>
 
         <div className="dropdown text-end ml-3  col-4 mr-2 ">
-            <i>
+          <i>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="26"
               height="26"
               fill="currentColor"
-              class="bi bi-bell-fill"
+              className="bi bi-bell-fill"
               viewBox="0 0 16 16"
             >
               <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
             </svg>
-            <span class="  translate-middle badge rounded-pill bg-danger">
+            <span className="  translate-middle badge rounded-pill bg-danger">
               99+
             </span>
-            </i>
-            
+          </i>
+
           <i
             className=" link-dark text-decoration-none dropdown-toggle"
             id="dropdownUser1"
@@ -115,9 +130,9 @@ export default function Header() {
               <hr className="dropdown-divider" />
             </li>
             <li>
-              <a className="dropdown-item" href="./">
+              <Link to="Login" className="dropdown-item" onClick={salir}>
                 Sign out
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
