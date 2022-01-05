@@ -5,11 +5,35 @@ import Register from "./pages/register/Register";
 import Profile from "./pages/profile/perfil";
 import Header from "./componentes/Header";
 import Main from "./pages/main";
-function App() {
-  return (
-    <>
+import { Redirect } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Provider } from "react-redux";
+import Store from "./store/Store";
+import Home from "./pages/Home/Home";
 
+function App({estado}) {
+  const [redirect, setredirect] = useState(estado?estado:false);
+  const [redirect2, setredirect2] = useState(estado?estado:false);
+ 
+  useEffect(() => {
+    console.log(5)
+    if (window.location.pathname.toLocaleLowerCase() !== "/login") {
+      if (localStorage.getItem("session") === null) {
+        setredirect(true);
+      }
+    }else{
+      if (localStorage.getItem("session") == "true") {
+        setredirect2(true)
+      }
+    }
+  }, []);
+  
+  return (
+    <Provider store={Store} >
+    
       <Router>
+      {redirect ? <Redirect push to="/login" /> : null}
+      {redirect2 ? <Redirect push to="/home" /> : null}
         <Switch>
           <Route path="/login">
             <div className="">
@@ -27,14 +51,16 @@ function App() {
           </Route>
 
           <Route path="/">
-             <Route path="/">
-             <Header />
-             <Main pg="" />
-            
-             </Route>
+            <Route path="/">
+              <Header />
+              <Main pg="" />
+              <Home></Home>
+            </Route>
             <Route path="/home">
               <Main pg="home" />
-              <h2 className="container bg-dark text-center text-white fs-3 p-3">pagina principal</h2>
+              <h2 className="container bg-dark text-center text-white fs-3 p-3">
+                pagina principal
+              </h2>
             </Route>
             <Route path="/user">
               <Main pg="user" />
@@ -43,12 +69,14 @@ function App() {
             <Route path="/f">FFFF</Route>
             <Route path="/menu">
               <Main pg="menu" />
-              <h2 className= "container bg-dark text-center text-white fs-3 p-3">Menu</h2>
+              <h2 className="container bg-dark text-center text-white fs-3 p-3">
+                Menu
+              </h2>
             </Route>
           </Route>
         </Switch>
       </Router>
-    </>
+    </Provider>
   );
 }
 

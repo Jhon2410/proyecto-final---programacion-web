@@ -7,6 +7,7 @@ export default function Login() {
     const iniciar =(e)=>{
         e.preventDefault();
         localStorage.setItem("session",true)
+        window.location.reload();
     }
   return (
     <>
