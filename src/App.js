@@ -16,14 +16,14 @@ function App({estado}) {
   const [redirect2, setredirect2] = useState(estado?estado:false);
  
   useEffect(() => {
-    console.log(window.location.pathname.toLocaleLowerCase() !=="/register")
     if (window.location.pathname.toLocaleLowerCase() === "/login" || window.location.pathname.toLocaleLowerCase() === "/register"  ) {
-      if (localStorage.getItem("session") === null) {
-        setredirect2(true);
-      }
-    }else{
       if (localStorage.getItem("session") === "true") {
-        setredirect(true)
+        setredirect2(true)
+      }
+     
+    }else{
+      if (localStorage.getItem("session") === null) {
+        setredirect(true);
       }
     }
   }, []);
