@@ -16,14 +16,14 @@ function App({estado}) {
   const [redirect2, setredirect2] = useState(estado?estado:false);
  
   useEffect(() => {
-    console.log(5)
-    if (window.location.pathname.toLocaleLowerCase() !== "/login") {
+    console.log(window.location.pathname.toLocaleLowerCase() !=="/register")
+    if (window.location.pathname.toLocaleLowerCase() === "/login" || window.location.pathname.toLocaleLowerCase() === "/register"  ) {
       if (localStorage.getItem("session") === null) {
-        setredirect(true);
+        setredirect2(true);
       }
     }else{
-      if (localStorage.getItem("session") == "true") {
-        setredirect2(true)
+      if (localStorage.getItem("session") === "true") {
+        setredirect(true)
       }
     }
   }, []);
@@ -42,12 +42,10 @@ function App({estado}) {
           </Route>
 
           <Route path="/register">
-            <div className="d-flex  justify-content-center align-items-center   contenedorLogin">
               <Register />
               <Link to="/" className="d-none">
                 pagina princpial
               </Link>
-            </div>
           </Route>
 
           <Route path="/">

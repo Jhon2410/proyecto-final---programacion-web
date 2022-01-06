@@ -1,33 +1,70 @@
 import { Link } from "react-router-dom"
 import GoogleButton from "../componentes/GoogleButton";
 import "./../../App.css";
+import "./style.css";
 
 export default function Register(){
 
   
     return(
         <>
-        <div className="container mx-auto  col-10 col-md-6 col-lg-4 shadow my-2 p-3 formulario-login rounded">
-            <h1 className="text-center text-uppercase">Register</h1>
-            <form autoComplete="off" className="mx-10">
-            <input type="text" placeholder="nombres" autoComplete="off" className="col-6  form-control text-white py-3 my-3 " />
-            <input type="text" placeholder="apellidos" autoComplete="off" className="col-6  form-control text-white py-3 my-3 " />
-
-                <input type="text" placeholder="Escriba el correo" autoComplete="off" className="col-12  form-control text-white py-3 my-3 " />
-                <input type="password" placeholder="Escriba la contraseña" className="col-12 shadow form-control text-white py-3 my-3"  />
-                <input type="password" placeholder="Escriba la contraseña nuevamente" className="col-12 shadow form-control text-white py-3 my-3"  />
-               <label htmlFor="fecha" className="text-success text-uppercase">fecha de nacimiento</label>
-                <input type="date"  name="fecha" className="col-12 shadow form-control text-white py-3 my-3"  />
-                <input type="submit" value="iniciar session" className="btn btn-primary form-control col-12 text-white py-2" />
-            </form>
-            <h6 className="my-3">
-            <GoogleButton className="w-100 col-12"/>
-
-            </h6>
-            <h6 className="text-center col-12 ">
-            <Link to="/login" >iniciar sessión</Link>
-            </h6>
+        <div className="container"> 
+    <div className="card">
+        <div className="parent">
+            <div className="top-div"> <img src="https://imgur.com/3U0Yawd.png" alt="as" />
+                <h3>Eden</h3>
+            </div>
+            <ul className="progress-bar">
+                <li className="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
+        <div className="main active">
+            <div className="content">
+                <h4>Welcome! First things first...</h4>
+                <p>You can always change them later.</p>
+            </div>
+            <div className="input-text"> <input type="text" placeholder="Steve Jobs" id="full-name" required /> <span>Full Name</span> </div>
+            <div className="input-text"> <input type="text" placeholder="Steve" /> <span>Display Name</span> </div>
+            <div className="button"> <button className="create-workspace">Create Workspace</button> </div>
+        </div>
+        <div className="main">
+            <div className="content">
+                <h4>Let's set up a home for all your work</h4>
+                <p>You can always create another workspace later.</p>
+            </div>
+            <div className="input-text"> <input type="text" placeholder="Eden" required /> <span>Workspace Name</span> </div>
+            <div className="input-text"> <input type="text" placeholder="Example : https://www.google.com/" /> <span>Workspace URL(optional)</span> </div>
+            <div className="button button_gap"> <button className="back-click">Back</button> <button className="next-click">Next</button> </div>
+        </div>
+        <div className="main">
+            <div className="content">
+                <h4>How are you planning to use Eden?</h4>
+                <p>We'll stream line your setup accordingly.</p>
+            </div>
+            <div className="radio-text"> <input type="radio" name="Select" id="radio-button-1" /> <input type="radio" name="Select" id="radio-button-2" /> <label htmlFor="radio-button-1" className="radio-button-1"> <i className="fa fa-user"></i>
+                    <h5>For Myself</h5>
+                    <p>Write better.Think more clearly.Stay organized.</p>
+                </label> <label htmlFor="radio-button-2" className="radio-button-2"> <i className="fa fa-users"></i>
+                    <h5>With my team</h5>
+                    <p>Wikis,docs,tasks and projects all in one space.</p>
+                </label> </div>
+            <div className="button button_gap1"> <button className="back-click">Back</button> <button className="finish-click">Finish</button> </div>
+        </div>
+        <div className="main"> <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /> </svg>
+            <div className="content">
+                <h2>Congratulations! <span id="shown_name"></span></h2>
+                <p>You have completed onboarding,you can start using the Eden!</p>
+            </div>
+            <div className="button launch"> <button>Launch Eden</button> </div>
+        </div>
+    </div>
+    <GoogleButton />
+    <Link to="/login"></Link>
+    </div>
         </>
     )
 }

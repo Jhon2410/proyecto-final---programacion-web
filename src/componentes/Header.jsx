@@ -84,7 +84,9 @@ const Header = ({ estado, puntos,reset }) => {
            {
             puntos > 0 ?  <span className="  translate-middle badge rounded-pill bg-danger">
               {puntos}
-            </span> : null
+            </span> :  <span className=" d-none  translate-middle badge rounded-pill bg-danger">
+              {puntos}
+            </span>
            }
           </i>
 

@@ -43,8 +43,8 @@ function GoogleButton() {
       
     //   const res = await PostUsuariosGoogle({nombre:  profile.getName(), email : profile.getEmail(), fotoUrl :profile.getImageUrl() , documento :  profile.getId(), role:"vendedor"})
     //  console.log(res)
-    //  if(res.data.estado==0 ){
-    //       if( !res.data.respuesta=="Los datos no fueron enviados correctamente!"){
+    //  if(res.data.estado===0 ){
+    //       if( !res.data.respuesta==="Los datos no fueron enviados correctamente!"){
     //         alert(res.data.respuesta)
     //         }
     //     }else{
@@ -117,13 +117,14 @@ function GoogleButton() {
     //ensure everything is set before loading the script
     loadGoogleScript();
     
-  },[]);
+  },);
 
   
   
   
   return (
     <div className="">
+    {imageUrl}
         {!isLoggedIn &&
           <div id="google-signin" className=" mx-auto text-center btn-google overflow-hidden"></div>
         }
