@@ -10,30 +10,31 @@ import { useEffect, useState } from "react";
 import { Provider } from "react-redux";
 import Store from "./store/Store";
 import Home from "./pages/Home/Home";
+import Chat from "./pages/chat/Chat";
+function App({ estado }) {
+  const [redirect, setredirect] = useState(estado ? estado : false);
+  const [redirect2, setredirect2] = useState(estado ? estado : false);
 
-function App({estado}) {
-  const [redirect, setredirect] = useState(estado?estado:false);
-  const [redirect2, setredirect2] = useState(estado?estado:false);
- 
   useEffect(() => {
-    if (window.location.pathname.toLocaleLowerCase() === "/login" || window.location.pathname.toLocaleLowerCase() === "/register"  ) {
+    if (
+      window.location.pathname.toLocaleLowerCase() === "/login" ||
+      window.location.pathname.toLocaleLowerCase() === "/register"
+    ) {
       if (localStorage.getItem("session") === "true") {
-        setredirect2(true)
+        setredirect2(true);
       }
-     
-    }else{
+    } else {
       if (localStorage.getItem("session") === null) {
         setredirect(true);
       }
     }
   }, []);
-  
+
   return (
-    <Provider store={Store} >
-    
+    <Provider store={Store}>
       <Router>
-      {redirect ? <Redirect push to="/login" /> : null}
-      {redirect2 ? <Redirect push to="/home" /> : null}
+        {redirect ? <Redirect push to="/login" /> : null}
+        {redirect2 ? <Redirect push to="/home" /> : null}
         <Switch>
           <Route path="/login">
             <div className="">
@@ -42,17 +43,16 @@ function App({estado}) {
           </Route>
 
           <Route path="/register">
-              <Register />
-              <Link to="/" className="d-none">
-                pagina princpial
-              </Link>
+            <Register />
+            <Link to="/" className="d-none">
+              pagina princpial
+            </Link>
           </Route>
 
           <Route path="/">
             <Route path="/">
               <Header />
               <Main pg="" />
-              <Home></Home>
             </Route>
             <Route path="/home">
               <Main pg="home" />
@@ -67,9 +67,16 @@ function App({estado}) {
             <Route path="/f">FFFF</Route>
             <Route path="/menu">
               <Main pg="menu" />
+              <Home></Home>
+
               <h2 className="container bg-dark text-center text-white fs-3 p-3">
                 Menu
               </h2>
+            </Route>
+
+            <Route path="/chat">
+              <Main pg="chat" />
+              <Chat></Chat>
             </Route>
           </Route>
         </Switch>

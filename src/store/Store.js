@@ -1,8 +1,16 @@
 import { createStore } from "redux"
+import { getPaises } from "../servicios"
 const initialState = {
-    puntos : 0
+    puntos : 0,
+    idioma : "Español",
+    paises : (async()=>{
+        const res = await getPaises()
+        return res
+    })()
 
 }
+
+
 
 const reducerEn = (state=initialState , action)=>{
     console.log(action)

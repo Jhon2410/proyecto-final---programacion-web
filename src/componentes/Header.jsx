@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import Configuracion from "./Configuracion";
 const Header = ({ estado, puntos,reset }) => {
   const [redirect, setredirect] = useState(estado ? estado : false);
   const salir = () => {
@@ -157,7 +158,9 @@ const Header = ({ estado, puntos,reset }) => {
               aria-label="Close"
             ></button>
           </div>
-          <div className="offcanvas-body">...</div>
+          <div className="offcanvas-body">
+            <Configuracion></Configuracion>
+          </div>
         </div>
 
         <div

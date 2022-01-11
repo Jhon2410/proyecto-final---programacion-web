@@ -21,9 +21,9 @@ const paginas = [
     url: "/user",
   },
   {
-    icono: "server",
+    icono: "chat",
     nombre: " ",
-    url: "/user",
+    url: "/chat",
   },
   {
     icono: "envelope",
