@@ -53,6 +53,7 @@ function App({ estado }) {
             <Route path="/">
               <Header />
               <Main pg="" />
+              <Redirect to="/home"></Redirect>
             </Route>
             <Route path="/home">
               <Main pg="home" />
