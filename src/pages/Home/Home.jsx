@@ -1,16 +1,10 @@
 import { connect } from "react-redux"
-import AddPunts from "./AddPunts"
+import Publicacion from "../componentes/Publicacion"
 
 const  Home = ({puntos, add})=>{
     return (
         <div className="container text-center">
-        <h1 className="text-center bg-dark">{puntos}</h1>
-        <h1 className="text-center bg-dark">{puntos}</h1>
-        <h1 className="text-center bg-dark">{puntos}</h1>
-        <h1 className="text-center bg-dark">{puntos}</h1>
-        <h1 className="text-center bg-dark">{puntos}</h1>
-        <h1 className="text-center bg-dark">{puntos}</h1>
-        <AddPunts></AddPunts>
+        <Publicacion />
         </div>
     )
 }

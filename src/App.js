@@ -57,9 +57,8 @@ function App({ estado }) {
             </Route>
             <Route path="/home">
               <Main pg="home" />
-              <h2 className="container bg-dark text-center text-white fs-3 p-3">
-                pagina principal
-              </h2>
+              <Home></Home>
+             
             </Route>
             <Route path="/user">
               <Main pg="user" />
