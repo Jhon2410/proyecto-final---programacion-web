@@ -3,7 +3,7 @@ import Publicacion from "../componentes/Publicacion"
 
 const  Home = ({puntos, add})=>{
     return (
-        <div className="container text-center">
+        <div className="">
         <Publicacion />
         </div>
     )

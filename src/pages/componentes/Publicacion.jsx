@@ -1,6 +1,6 @@
 export default function Publicacion() {
   return (
-    <div class="card text-center bg-dark text-white">
+    <div class="card mr-5">
       <div class="card-header text-start"><span className="position-relative left-0">Featured</span> <span className="position-absolute end-0">54</span> </div>
       <img src="https://bunkerdb.com/blog/wp-content/uploads/2020/07/Low-code-No-code.jpg"  className="card-img-top img-fluid h-50" alt="..."></img>
       <div class="card-body">
