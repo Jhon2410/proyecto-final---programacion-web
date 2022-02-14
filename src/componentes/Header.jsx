@@ -16,7 +16,7 @@ const Header = ({ estado, puntos,reset }) => {
     }
   }, []);
   return (
-    <div className="  mb-3 py-2 bg-white ">
+    <div className="  mb-3 py-2 bg-white position-fixed myHeader">
       {redirect ? <Redirect push to="/login" /> : null}
       <div className=" d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <div
