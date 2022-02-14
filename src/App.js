@@ -13,6 +13,8 @@ import Home from "./pages/Home/Home";
 import Chat from "./pages/chat/Chat";
 import AsidePeople from "./pages/componentes/AsidePeople";
 import Videos from "./pages/videos/Videos"
+import Wallet from "./pages/wallet/Wallet";
+import Tienda from "./pages/tienda/Tienda";
 function App({ estado }) {
   const [redirect, setredirect] = useState(estado ? estado : false);
   const [redirect2, setredirect2] = useState(estado ? estado : false);
@@ -70,7 +72,7 @@ function App({ estado }) {
                 <Route path="/store">
                   <Main pg="store-alt" />
                   <div className="mycontenedor">
-                    <Videos />
+                    <Tienda></Tienda>
                   </div>
             </Route>
 
@@ -78,7 +80,7 @@ function App({ estado }) {
                 <Route path="/money">
                   <Main pg="money" />
                   <div className="mycontenedor">
-                    <Videos />
+                  <Wallet></Wallet>
                   </div>
             </Route>
            
