@@ -13,12 +13,12 @@ const paginas = [
   {
     icono: "movie-play",
     nombre: "videos",
-    url: "/menu",
+    url: "/videos",
   },
   {
     icono: "store-alt",
-    nombre: "Store",
-    url: "/store-alt",
+    nombre: "store",
+    url: "/store",
   },
   {
     icono: "chat",

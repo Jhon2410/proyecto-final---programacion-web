@@ -12,6 +12,7 @@ import Store from "./store/Store";
 import Home from "./pages/Home/Home";
 import Chat from "./pages/chat/Chat";
 import AsidePeople from "./pages/componentes/AsidePeople";
+import Videos from "./pages/videos/Videos"
 function App({ estado }) {
   const [redirect, setredirect] = useState(estado ? estado : false);
   const [redirect2, setredirect2] = useState(estado ? estado : false);
@@ -51,11 +52,36 @@ function App({ estado }) {
           </Route>
 
           <Route path="/">
+
+
+
             <Route path="/">
               <Header />
               <Main pg="" />
               <Redirect to="/home"></Redirect>
             </Route>
+             <Route path="/videos">
+                  <Main pg="movie-play" />
+                  <div className="mycontenedor">
+                    <Videos />
+                  </div>
+            </Route>
+
+                <Route path="/store">
+                  <Main pg="store-alt" />
+                  <div className="mycontenedor">
+                    <Videos />
+                  </div>
+            </Route>
+
+
+                <Route path="/money">
+                  <Main pg="money" />
+                  <div className="mycontenedor">
+                    <Videos />
+                  </div>
+            </Route>
+           
             <Route path="/home">
               <Main pg="home" />
               <div className="container  w-50 mycontenedor  d-flex flex-row  justify-content-between">
