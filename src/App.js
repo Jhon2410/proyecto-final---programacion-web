@@ -58,10 +58,14 @@ function App({ estado }) {
             </Route>
             <Route path="/home">
               <Main pg="home" />
-              <div className="container  w-50 my-3  d-flex flex-row  justify-content-between">
+              <div className="container  w-50 mycontenedor  d-flex flex-row  justify-content-between">
                 <div className="position-fixed h-100  overflow-auto  start-0 mx-5 container w-25">
                   <div className="card mx-3">
-                    <img src="https://www.picuino.com/_images/codeorg-logo.png" className="card-img-top" alt="..." />
+                    <img
+                      src="https://www.picuino.com/_images/codeorg-logo.png"
+                      className="card-img-top"
+                      alt="..."
+                    />
                     <div className="card-body">
                       <h5 className="card-title">Card title</h5>
                       <p className="card-text">

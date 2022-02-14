@@ -41,6 +41,10 @@ a {
   border: none;
 }
 
+.mycontenedor{
+  margin-top: 95px;
+}
+
 .follower-wrapper li {
   list-style-type: none;
   color: #fff;

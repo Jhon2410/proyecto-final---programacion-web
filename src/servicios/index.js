@@ -1,6 +1,6 @@
 const { default: axios } = require("axios");
 
-const base_url = "";
+const base_url = "http://localhost:8080/";
 
 
 const getPaises = async ()=>{
@@ -18,10 +18,12 @@ const validar_servicio = (e) =>{
 
 //leer usuario
 
-const getAllUsers_services = () =>{
-
+const getAllUsers_services = async () =>{
+    const res = await axios.post(base_url + "getUsuarios");
+    console.log(res.data)
 
 }
+getAllUsers_services()
 
 //crear usuario
 

@@ -4,6 +4,25 @@ body{
 }
 
 
+*::-webkit-scrollbar{
+  background: none;
+  width: 7px;
+  opacity: 0.1;
+
+}
+
+::-webkit-scrollbar-track {
+  background: #e1e1e1c2;
+  border-radius: 25px;
+  
+  
+}
+::-webkit-scrollbar-thumb {
+  background: #02060ca8;
+  
+  border-radius: 2px;
+}
+
 h1{
   color:#0d6efd;
 }
@@ -139,6 +158,13 @@ a{
   /*border: 10px solid #70b5e6ee;*/
 }
 
+
+.myHeader{
+  width:100%;
+  top:0px;
+  z-index: 100;
+
+}
 .social-prof h3 {
   font-size: 36px;
   font-weight: 700;

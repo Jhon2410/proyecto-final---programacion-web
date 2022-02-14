@@ -2,33 +2,33 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const paginas = [
   {
     icono: "home",
-    nombre: " ",
+    nombre: "home",
     url: "/home",
   },
   {
     icono: "user",
-    nombre: " ",
+    nombre: "profile",
     url: "/user",
   },
   {
-    icono: "file-blank",
-    nombre: " ",
+    icono: "movie-play",
+    nombre: "videos",
     url: "/menu",
   },
   {
-    icono: "book-content",
-    nombre: " ",
-    url: "/user",
+    icono: "store-alt",
+    nombre: "Store",
+    url: "/store-alt",
   },
   {
     icono: "chat",
-    nombre: " ",
+    nombre: "chat",
     url: "/chat",
   },
   {
-    icono: "envelope",
-    nombre: " ",
-    url: "/user",
+    icono: "money",
+    nombre: "Wallet",
+    url: "/money",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function Main(props) {
       return (
         <li key={index}>
           <Link to={ link.url} pg={n} className={"nav-link scrollto  "}>
-            <i className={"bx bx-" + n}></i> <span>{n}</span>
+            <i className={"bx bx-" + n}></i> <span>{link.nombre}</span>
           </Link>
         </li>
       );
@@ -59,12 +59,7 @@ export default function Main(props) {
       <nav id="navbar" className="navbar nav-menu">
         <ul>
           {generarMenu}
-          {/*}
-        <li><a href="#resume" className="nav-link scrollto"><i className="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="#portfolio" className="nav-link scrollto"><i className="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-        <li><a href="#services" className="nav-link scrollto"><i className="bx bx-server"></i> <span>Services</span></a></li>
-        <li><a href="#contact" className="nav-link scrollto"><i className="bx bx-envelope"></i> <span>Contact</span></a></li>
-     {*/}
+        
         </ul>
       </nav>
     </header>
