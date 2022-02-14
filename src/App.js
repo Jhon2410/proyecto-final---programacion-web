@@ -86,7 +86,7 @@ function App({ estado }) {
            
             <Route path="/home">
               <Main pg="home" />
-              <div className="container  w-50 mycontenedor  d-flex flex-row  justify-content-between">
+              <div className="container d-none d-sm-flex  w-50  mycontenedor   flex-row  justify-content-between">
                 <div className="position-fixed h-100  overflow-auto  start-0 mx-5 container w-25">
                   <div className="card mx-3">
                     <img
@@ -118,6 +118,19 @@ function App({ estado }) {
                   {" "}
                   <AsidePeople />
                 </div>
+              </div> 
+
+              <div className="container  w-100 d-sm-none mycontenedor  d-flex flex-row  mx-0">
+              
+                <div className="mx-0 position-relative start-0">
+                  <Home></Home>
+                  <Home></Home>
+                  <Home></Home>
+                  <Home></Home>
+                  <Home></Home>
+                  <Home></Home>
+                </div>
+              
               </div>
             </Route>
             <Route path="/user">
