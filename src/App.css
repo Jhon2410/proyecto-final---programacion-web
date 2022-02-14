@@ -14,13 +14,15 @@ body{
 }
 
 .btn:hover{
-filter:brightness(0.8);
+color: black;
+
+filter:brightness(1.5);
 }
 .btn-enviar{
-  background-color: #0d6efd;
+  background-color: #024ec0;
 }
 .btn-retirar{
-  background: red;
+  background: rgb(192, 0, 0);
 }
 
 .btn-historial{
