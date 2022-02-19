@@ -1,13 +1,32 @@
 import { Link } from "react-router-dom";
+import { getAllUsers_services } from "../../servicios";
 import GoogleButton from "../componentes/GoogleButton";
 import "./../../App.css";
+import { useState } from "react";
 
 export default function Login() {
+const [username, setUsername] = useState();
+const [password, setPassword] = useState();
 
-    const iniciar =(e)=>{
+
+    const iniciar = async(e)=>{
         e.preventDefault();
-        localStorage.setItem("session",true)
-        window.location.reload();
+        const data ={
+          "usuario_username" : username,
+          "usuario_contraseña" : password,
+        }
+        const res = await getAllUsers_services(data)
+        console.log(res)
+        // localStorage.setItem("session",true)
+        // window.location.reload();
+    }
+
+    const onChangeUsername = (e) => {
+      setUsername(e.target.value)
+    }
+
+    const onChangePassword = (e) => {
+      setPassword(e.target.value)
     }
   return (
     <>
@@ -25,6 +44,7 @@ export default function Login() {
                   type="text"
                   id="username"
                   name="username"
+                  onChange={onChangeUsername}
                   required="required"
                 />
               </div>
@@ -34,6 +54,7 @@ export default function Login() {
                   type="password"
                   id="password"
                   name="password"
+                  onChange={onChangePassword}
                   required="required"
                 />
               </div>
@@ -49,7 +70,7 @@ export default function Login() {
                 </a>
               </div>
               <div className="form-group">
-                <button type="submit"><Link to="Home">Log In</Link></button>
+              <button type="submit">Log In</button>
                
               </div>
 

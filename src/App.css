@@ -13,6 +13,26 @@ body{
 
 }
 
+.btn:hover{
+color: black;
+
+filter:brightness(1.5);
+}
+.btn-enviar{
+  background-color: #024ec0;
+}
+.btn-retirar{
+  background: rgb(192, 0, 0);
+}
+
+.btn-historial{
+background-color: #8619a9;
+}
+
+i:hover{
+  cursor:pointer;
+}
+
 ::-webkit-scrollbar-track {
   background: #e1e1e1c2;
   border-radius: 25px;
