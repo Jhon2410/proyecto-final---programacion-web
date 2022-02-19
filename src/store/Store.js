@@ -1,13 +1,9 @@
 import { createStore } from "redux"
-import { getPaises } from "../servicios"
 const initialState = {
     puntos : 0,
     idioma : "Español",
     usuario: [],
-    paises : (async()=>{
-        const res = await getPaises()
-        return res
-    })()
+    paises : ""
 
 }
 

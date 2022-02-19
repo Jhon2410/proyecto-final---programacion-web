@@ -129,7 +129,7 @@ const renderCountries = paises.map((pais,index)=>{ return <option key={index} va
           <div className="form-content">
             <form onSubmit={registrar} method="POST">
               <div className="form-group">
-                <label htmlhtmlFor="username">Username</label>
+                <label htmlFor="username">Username</label>
                 <input
                   type="text"
                   id="username"
@@ -139,7 +139,7 @@ const renderCountries = paises.map((pais,index)=>{ return <option key={index} va
                 />
               </div>
               <div className="form-group">
-                <label htmlhtmlFor="password">Password</label>
+                <label htmlFor="password">Password</label>
                 <input
                   type="password"
                   id="password"
@@ -148,7 +148,7 @@ const renderCountries = paises.map((pais,index)=>{ return <option key={index} va
                   onChange={passwordChange}
                 />
 
-                <label htmlhtmlFor="password2" className="mt-2 ">
+                <label htmlFor="password2" className="mt-2 ">
                   Repeat Password
                 </label>
                 <input
