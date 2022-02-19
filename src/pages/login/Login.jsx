@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
+import { PostUsers_services } from "../../servicios";
 import GoogleButton from "../componentes/GoogleButton";
 import "./../../App.css";
 
 export default function Login() {
 
-    const iniciar =(e)=>{
+    const iniciar = async(e)=>{
         e.preventDefault();
+        const res = await PostUsers_services({})
+        console.log(res)
         localStorage.setItem("session",true)
         window.location.reload();
     }
@@ -49,7 +52,7 @@ export default function Login() {
                 </a>
               </div>
               <div className="form-group">
-                <button type="submit"><Link to="Home">Log In</Link></button>
+              <button type="submit">Log In</button>
                
               </div>
 

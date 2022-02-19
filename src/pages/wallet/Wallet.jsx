@@ -1,10 +1,10 @@
-import Starts from "../componentes/Starts";
+import Stars from "../componentes/Stars";
 
 export default function Wallet() {
   return (
     <div className="container bg-dark">
       <div>
-       <Starts></Starts>
+       <Stars></Stars>
         <div className="controls-Money d-flex text-center justify-content-center my-3 p-3 ">
             <button className="btn btn-enviar mx-3 text-white fw-bolder">Enviar</button>
             <button className="btn btn-retirar mx-3 text-white fw-bolder">Retirar</button>

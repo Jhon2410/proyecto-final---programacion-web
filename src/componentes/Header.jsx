@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import Stars from "../pages/componentes/Stars";
 import Configuracion from "./Configuracion";
-const Header = ({ estado, puntos,reset }) => {
+const Header = ({ estado, puntos, reset }) => {
   const [redirect, setredirect] = useState(estado ? estado : false);
   const salir = () => {
     localStorage.removeItem("session");
@@ -39,8 +40,24 @@ const Header = ({ estado, puntos,reset }) => {
             />
           </svg>
         </div>
-
-        <div className="d-flex align-items-center col-6 mb-2 mb-lg-0 text-dark text-decoration-none">
+        <div className="d-sm-none   mx-2">
+        <a href="./">
+            <img src="WOR.svg" width="70" alt="logo" />
+          </a>
+          <i type="" className=" position-relative mx-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="blue"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+          </i>
+        </div>
+        <div className="d-flex d-none   d-sm-flex align-items-center col-6 mb-2 mb-lg-0 text-dark text-decoration-none">
           <a href="./">
             <img src="WOR.svg" width="60" alt="logo" />
           </a>
@@ -70,25 +87,77 @@ const Header = ({ estado, puntos,reset }) => {
           </div>
         </div>
 
-        <div className="dropdown text-end ml-3  col-4 mr-2 ">
-          <i onClick={()=>reset()}>
+        <div className="dropdown text-end ml-3 d-flex  mr-2 ">
+          <i type="" className=" position-relative mx-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="26"
               height="26"
-              fill="currentColor"
+              fill="green"
+              class="bi bi-cart4"
+              viewBox="0 0 16 16"
+            >
+              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+            </svg>
+            <span className="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-success">
+              2140
+              <span className="visually-hidden"></span>
+            </span>
+          </i>
+
+          <i type="" className=" position-relative mx-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="26"
+              fill="yellow"
+              className="bi bi-star-fill"
+              viewBox="0 0 16 16"
+            >
+              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg>
+            <span className="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-warning">
+              2140
+              <span className="visually-hidden"></span>
+            </span>
+          </i>
+          <i onClick={() => reset()}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="26"
+              fill="red"
               className="bi bi-bell-fill"
               viewBox="0 0 16 16"
             >
               <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
             </svg>
-           {
-            puntos > 0 ?  <span className="  translate-middle badge rounded-pill bg-danger">
-              {puntos}
-            </span> :  <span className=" d-none  translate-middle badge rounded-pill bg-danger">
-              {puntos}
+            {puntos > 0 ? (
+              <span className="  translate-middle badge rounded-pill bg-danger">
+                {puntos}
+              </span>
+            ) : (
+              <span className=" d-none  translate-middle badge rounded-pill bg-danger">
+                {puntos}
+              </span>
+            )}
+          </i>
+
+          <i type="" className=" position-relative mx-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="26"
+              fill="blue"
+              class="bi bi-chat-fill"
+              viewBox="0 0 16 16"
+            >
+              <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z" />
+            </svg>
+            <span className="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-primary">
+              2140
+              <span className="visually-hidden"></span>
             </span>
-           }
           </i>
 
           <i
@@ -97,7 +166,7 @@ const Header = ({ estado, puntos,reset }) => {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            <span className="mx-2">Jhon anderson</span>
+            <span className="mx-2 d-none d-sm-inline">Jhon anderson</span>
 
             <img
               src="https://github.com/mdo.png"
@@ -189,20 +258,16 @@ const Header = ({ estado, puntos,reset }) => {
   );
 };
 
+const mapStateToProps = (state) => ({
+  puntos: state.puntos
+});
 
-
-const mapStateToProps = state =>({
-  puntos : state.puntos
-})
-
-const mapDispatchToProps= dispatch => ({
-  reset(){
+const mapDispatchToProps = (dispatch) => ({
+  reset() {
     dispatch({
-      type : "reset_notify"
-    })
-
+      type: "reset_notify"
+    });
   }
-})
-
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

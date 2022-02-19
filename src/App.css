@@ -29,6 +29,10 @@ filter:brightness(1.5);
 background-color: #8619a9;
 }
 
+i:hover{
+  cursor:pointer;
+}
+
 ::-webkit-scrollbar-track {
   background: #e1e1e1c2;
   border-radius: 25px;

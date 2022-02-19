@@ -11,7 +11,7 @@ const getPaises = async ()=>{
 }
 
 const validar_servicio = (e) =>{
-    alert(base_url)
+    alert(base_url + "usuarios/create/")
 }
 
 //usuario
@@ -27,9 +27,9 @@ getAllUsers_services()
 
 //crear usuario
 
-const PostUsers_services = () =>{
-    
-
+const PostUsers_services = async (user) =>{
+    const res = await axios.post(base_url + "usuarios/create/" , user)
+    return res;
 }
 //actuaolizar usuario
 

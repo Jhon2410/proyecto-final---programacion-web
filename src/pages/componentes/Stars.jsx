@@ -1,6 +1,6 @@
-export default function Starts(){
+export default function Stars(){
     return(
-        <h6 className=" rounded text-warning text-center fs-1">
+        <h6 className=" rounded text-warning text-center fs-1 my-3">
         12557{" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
